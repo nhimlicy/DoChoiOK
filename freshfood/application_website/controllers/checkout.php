@@ -1,11 +1,11 @@
 <?php
 class checkout extends CI_Controller {
-    public function cart(){
+    public function index(){
         $this->load->library( 'smartyci' );
         $this->load->model('products');
         $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
      
-            $cart = $_SESSION['cart'];
+           
             
            $rows = array();
            $total = 0;
@@ -18,6 +18,45 @@ class checkout extends CI_Controller {
         $this->smartyci->assign('cart', $cart);
         $this->smartyci->assign('rows', $rows);
         $this->smartyci->assign('total', $total);
+        
+        $this->load->model('account_sign');
+        $user_id = isset($_SESSION['user']) ? $_SESSION['user'] : 0;
+        
+         
+        $infor = $this->account_sign->get_row_id($user_id);
+        var_dump($infor);
+        $this->smartyci->assign('infor', $infor);
+        
+        $this->smartyci->display( 'checkout/checkout.tpl' );
+    }
+
+        public function cart(){
+        
+        $this->load->library( 'smartyci' );
+        $this->load->model('products');
+        $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+     
+           
+            
+           $rows = array();
+           $total = 0;
+           foreach ($cart as $value => $v) {
+               $r = $this->products->get_row($value);
+               $rows[] = $this->products->get_row($value);
+              $total +=  $v*$r->price;
+           }
+           
+        $this->smartyci->assign('cart', $cart);
+        $this->smartyci->assign('rows', $rows);
+        $this->smartyci->assign('total', $total);
+        $this->load->model('account_sign');
+        $user_id = isset($_SESSION['user']) ? $_SESSION['user'] : 0;
+        
+         
+        $infor = $this->account_sign->get_row_id($user_id);
+        var_dump($infor);
+        $this->smartyci->assign('infor', $infor);
+        
         $this->smartyci->display( 'checkout/cart.tpl' );
                
     }

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-07 03:35:59
+/* Smarty version 3.1.29, created on 2016-04-25 18:35:35
   from "C:\xampp\htdocs\freshfood\application_website\views\home\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5705b97ff01829_50273574',
+  'unifunc' => 'content_571e475793f690_04386020',
   'file_dependency' => 
   array (
     '431dc5bc260bbd37f9354440ba21fa84aad4e3d8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\freshfood\\application_website\\views\\home\\index.tpl',
-      1 => 1459960959,
+      1 => 1461602133,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5705b97ff01829_50273574 ($_smarty_tpl) {
+function content_571e475793f690_04386020 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,8 +61,15 @@ function content_5705b97ff01829_50273574 ($_smarty_tpl) {
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                                                            <?php if (count($_smarty_tpl->tpl_vars['infor']->value) != 0) {?>
+								<li><a href="#"><i class="fa fa-phone"></i><?php echo $_smarty_tpl->tpl_vars['infor']->value->buyer_telephone;?>
+</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i><?php echo $_smarty_tpl->tpl_vars['infor']->value->buyer_email;?>
+</a></li>
+                                                            <?php } else { ?>
+                                                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                                            <?php }?>
 							</ul>
 						</div>
 					</div>

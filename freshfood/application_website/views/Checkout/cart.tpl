@@ -33,8 +33,13 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								{if $infor|@count ne 0}
+								<li><a href="#"><i class="fa fa-phone"></i>{$infor->buyer_telephone}</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i>{$infor->buyer_email}</a></li>
+                                                            {else}
+                                                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                                            {/if}
 							</ul>
 						</div>
 					</div>
@@ -87,10 +92,10 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="account"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="checkout/cart" class="active"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="checkout/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="account"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -151,9 +156,10 @@
 				  <li><a href="#">Home</a></li>
 				  <li class="active">Shopping Cart</li>
 				</ol>
-			</div>
+			</div>{if $rows|@count ne 0}
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
+                                     
 					<thead>
 						<tr class="cart_menu">
 							<td class="image">Item</td>
@@ -166,7 +172,7 @@
 						</tr>
 					</thead>
 					<tbody>
-                                          
+                                         
                                             {foreach $rows as $row => $r}
                                                 
 						<tr>
@@ -199,7 +205,9 @@
 							</td>
 						</tr>
                                                 {/foreach}
-                                           
+                                           {else}
+                                           <h2>Không có sản phẩm</h2>
+                                           {/if}
 					</tbody>
 				</table>
 			</div>
@@ -271,12 +279,12 @@
 					<div class="total_area">
 						<ul>
 							<li>Cart Sub Total <span>{$total}</span></li>
-							<li>Eco Tax <span>$2</span></li>
+							<li>Eco Tax <span>0</span></li>
 							<li>Shipping Cost <span>Free</span></li>
-							<li>Total <span>$61</span></li>
+							<li>Total <span>{$total}</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+							<a class="btn btn-default check_out" href="checkout">Check Out</a>
 					</div>
 				</div>
 			</div>

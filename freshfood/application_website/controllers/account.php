@@ -7,15 +7,17 @@ class Account extends CI_Controller {
     public function sign_in(){
         $this->load->model('account_sign');
         if($this->input->post()){
-            var_dump($this->input->post('email'));
-            $infor = $this->account_sign->get_row($this->input->post('email'));
+            
             $pass = md5($this->input->post('pass'));
+           
+            $infor = $this->account_sign->get_row($this->input->post('email'));
+            
             if($pass == $infor->password){
                 $_SESSION['user'] = $infor->buyer_id;
-                var_dump($_SESSION['user']);
-            }
-            var_dump($infor);
+                redirect("home");
+            }   
         }
+        
     }
     public function sign_up(){
         if($this->input->post()){

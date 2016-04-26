@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-25 18:49:53
-  from "C:\xampp\htdocs\freshfood\application_website\views\home\list.tpl" */
+/* Smarty version 3.1.29, created on 2016-04-26 19:01:55
+  from "C:\xampp\htdocs\freshfood\application_website\views\checkout\checkout.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_571e4ab16e55f1_07998095',
+  'unifunc' => 'content_571f9f036d8350_23819672',
   'file_dependency' => 
   array (
-    '2c800babbdf05f80821ec81326a9086755f3e5ec' => 
+    '397b202ea05d50ac77573c1e2da061e0f6658744' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\freshfood\\application_website\\views\\home\\list.tpl',
-      1 => 1461602974,
+      0 => 'C:\\xampp\\htdocs\\freshfood\\application_website\\views\\checkout\\checkout.tpl',
+      1 => 1461690109,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_571e4ab16e55f1_07998095 ($_smarty_tpl) {
+function content_571f9f036d8350_23819672 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,10 +57,10 @@ function content_571e4ab16e55f1_07998095 ($_smarty_tpl) {
 		<div class="header_top"><!--header_top-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-6 ">
+					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-                                                            <?php if (count($_smarty_tpl->tpl_vars['infor']->value) != 0) {?>
+								<?php if (count($_smarty_tpl->tpl_vars['infor']->value) != 0) {?>
 								<li><a href="#"><i class="fa fa-phone"></i><?php echo $_smarty_tpl->tpl_vars['infor']->value->buyer_telephone;?>
 </a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i><?php echo $_smarty_tpl->tpl_vars['infor']->value->buyer_email;?>
@@ -121,11 +121,11 @@ function content_571e4ab16e55f1_07998095 ($_smarty_tpl) {
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="checkout/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="account"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
+								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout.html" class="active"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -148,11 +148,11 @@ function content_571e4ab16e55f1_07998095 ($_smarty_tpl) {
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.html">Home</a></li>
-								<li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html" class="active">Products</a></li>
+                                        <li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
+										<li><a href="checkout.html" class="active">Checkout</a></li> 
 										<li><a href="cart.html">Cart</a></li> 
 										<li><a href="login.html">Login</a></li> 
                                     </ul>
@@ -174,136 +174,246 @@ function content_571e4ab16e55f1_07998095 ($_smarty_tpl) {
 						</div>
 					</div>
 				</div>
-				</div>
 			</div>
-	</header>
-	
-	<section id="advertisement">
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+	<section id="cart_items">
 		<div class="container">
-			<img src="images/shop/advertisement.jpg" alt="" />
-		</div>
-	</section>
-	
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="left-sidebar">
-						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							<?php
-$_from = $_smarty_tpl->tpl_vars['cates']->value;
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_c_0_saved_item = isset($_smarty_tpl->tpl_vars['c']) ? $_smarty_tpl->tpl_vars['c'] : false;
-$_smarty_tpl->tpl_vars['c'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['c']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['c']->value) {
-$_smarty_tpl->tpl_vars['c']->_loop = true;
-$__foreach_c_0_saved_local_item = $_smarty_tpl->tpl_vars['c'];
-?>
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h4 class="panel-title"><a href="home/list_cate/<?php echo $_smarty_tpl->tpl_vars['c']->value->cate_id;?>
-"><?php echo $_smarty_tpl->tpl_vars['c']->value->cate_name;?>
-</a></h4>
-								</div>
-							</div>
-							<?php
-$_smarty_tpl->tpl_vars['c'] = $__foreach_c_0_saved_local_item;
-}
-if ($__foreach_c_0_saved_item) {
-$_smarty_tpl->tpl_vars['c'] = $__foreach_c_0_saved_item;
-}
-?>
-						</div><!--/category-products-->
-						<div class="brands_products"><!--brands_products-->
-							
-						</div><!--/brands_products-->
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b>$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
-						
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
-						
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Check out</li>
+				</ol>
+			</div><!--/breadcrums-->
+
+			<div class="step-one">
+				<h2 class="heading">Step1</h2>
+			</div>
+			<div class="checkout-options">
+				<h3>New User</h3>
+				<p>Checkout options</p>
+				<ul class="nav">
+					<li>
+						<label><input type="checkbox"> Register Account</label>
+					</li>
+					<li>
+						<label><input type="checkbox"> Guest Checkout</label>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-times"></i>Cancel</a>
+					</li>
+				</ul>
+			</div><!--/checkout-options-->
+
+			<div class="register-req">
+				<p>Please use Register And Checkout to easily get access to your order history, or use Checkout as Guest</p>
+			</div><!--/register-req-->
+
+			<div class="shopper-informations">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="shopper-info">
+							<p>Shopper Information</p>
+							<form>
+								<input type="text" placeholder="Display Name">
+								<input type="text" placeholder="User Name">
+								<input type="password" placeholder="Password">
+								<input type="password" placeholder="Confirm password">
+							</form>
+							<a class="btn btn-primary" href="">Get Quotes</a>
+							<a class="btn btn-primary" href="">Continue</a>
+						</div>
 					</div>
-				</div>
-				
-				<div class="col-sm-9 padding-right">
-					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
-						<?php
-$_from = $_smarty_tpl->tpl_vars['rows_cate']->value;
-if (!is_array($_from) && !is_object($_from)) {
-settype($_from, 'array');
-}
-$__foreach_r_1_saved_item = isset($_smarty_tpl->tpl_vars['r']) ? $_smarty_tpl->tpl_vars['r'] : false;
-$_smarty_tpl->tpl_vars['r'] = new Smarty_Variable();
-$_smarty_tpl->tpl_vars['r']->_loop = false;
-foreach ($_from as $_smarty_tpl->tpl_vars['r']->value) {
-$_smarty_tpl->tpl_vars['r']->_loop = true;
-$__foreach_r_1_saved_local_item = $_smarty_tpl->tpl_vars['r'];
-?>
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="../uploads/<?php echo $_smarty_tpl->tpl_vars['r']->value->image;?>
-" alt="" />
-										<h2><?php echo $_smarty_tpl->tpl_vars['r']->value->price;?>
-</h2>
-										<p><?php echo $_smarty_tpl->tpl_vars['r']->value->name;?>
-</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2><?php echo $_smarty_tpl->tpl_vars['r']->value->price;?>
-</h2>
-										<p><?php echo $_smarty_tpl->tpl_vars['r']->value->name;?>
-</p>
-										<a  class="btn btn-default add-to-cart" href="<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
-"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
-								</div>
-                                                                                
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href="<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
-" class="view"><i class="fa fa-plus-square"></i>Chi tiết sản phẩm</a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-									</ul>
-								</div>
+					<div class="col-sm-5 clearfix">
+						<div class="bill-to">
+							<p>Bill To</p>
+							<div class="form-one">
+								<form>
+									<input type="text" placeholder="Company Name">
+									<input type="text" placeholder="Email*">
+									<input type="text" placeholder="Title">
+									<input type="text" placeholder="First Name *">
+									<input type="text" placeholder="Middle Name">
+									<input type="text" placeholder="Last Name *">
+									<input type="text" placeholder="Address 1 *">
+									<input type="text" placeholder="Address 2">
+								</form>
+							</div>
+							<div class="form-two">
+								<form>
+									<input type="text" placeholder="Zip / Postal Code *">
+									<select>
+										<option>-- Country --</option>
+										<option>United States</option>
+										<option>Bangladesh</option>
+										<option>UK</option>
+										<option>India</option>
+										<option>Pakistan</option>
+										<option>Ucrane</option>
+										<option>Canada</option>
+										<option>Dubai</option>
+									</select>
+									<select>
+										<option>-- State / Province / Region --</option>
+										<option>United States</option>
+										<option>Bangladesh</option>
+										<option>UK</option>
+										<option>India</option>
+										<option>Pakistan</option>
+										<option>Ucrane</option>
+										<option>Canada</option>
+										<option>Dubai</option>
+									</select>
+									<input type="password" placeholder="Confirm password">
+									<input type="text" placeholder="Phone *">
+									<input type="text" placeholder="Mobile Phone">
+									<input type="text" placeholder="Fax">
+								</form>
 							</div>
 						</div>
-						<?php
-$_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_local_item;
-}
-if ($__foreach_r_1_saved_item) {
-$_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_item;
-}
-?>
-						<ul class="pagination">
-							<li class="active"><a href="">1</a></li>
-							<li><a href="">2</a></li>
-							<li><a href="">3</a></li>
-							<li><a href="">&raquo;</a></li>
-						</ul>
-					</div><!--features_items-->
+					</div>
+					<div class="col-sm-4">
+						<div class="order-message">
+							<p>Shipping Order</p>
+							<textarea name="message"  placeholder="Notes about your order, Special Notes for Delivery" rows="16"></textarea>
+							<label><input type="checkbox"> Shipping to bill address</label>
+						</div>	
+					</div>					
 				</div>
 			</div>
+			<div class="review-payment">
+				<h2>Review & Payment</h2>
+			</div>
+
+			<div class="table-responsive cart_info">
+				<table class="table table-condensed">
+                                    <?php if (count($_smarty_tpl->tpl_vars['rows']->value) != 0) {?>
+					<thead>
+						<tr class="cart_menu">
+							<td class="image">Item</td>
+							<td class="description"></td>
+							<td class="price">Price</td>
+							<td class="quantity">Quantity</td>
+							<td class="total">Total</td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+                                            <?php
+$_from = $_smarty_tpl->tpl_vars['rows']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_r_0_saved_item = isset($_smarty_tpl->tpl_vars['r']) ? $_smarty_tpl->tpl_vars['r'] : false;
+$__foreach_r_0_saved_key = isset($_smarty_tpl->tpl_vars['row']) ? $_smarty_tpl->tpl_vars['row'] : false;
+$_smarty_tpl->tpl_vars['r'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['row'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['r']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->value => $_smarty_tpl->tpl_vars['r']->value) {
+$_smarty_tpl->tpl_vars['r']->_loop = true;
+$__foreach_r_0_saved_local_item = $_smarty_tpl->tpl_vars['r'];
+?>
+                                                
+						<tr>
+							<td class="cart_product">
+								<a href=""><img src="../uploads/<?php echo $_smarty_tpl->tpl_vars['r']->value->image;?>
+" alt=""></a>
+							</td>
+							<td class="cart_description">
+								<h4><a href=""><?php echo $_smarty_tpl->tpl_vars['r']->value->name;?>
+</a></h4>
+								<p>Web ID:<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+</p>
+							</td>
+							<td class="cart_price cart_price_<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+">
+								<p><?php echo $_smarty_tpl->tpl_vars['r']->value->price;?>
+</p>
+							</td >
+                                                        <td class="cart_price " > 
+                                                            <p class="cart_quantity_max_<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+"><?php echo $_smarty_tpl->tpl_vars['r']->value->quality;?>
+</p>
+                                                        </td>
+							<td class="cart_quantity">
+								<div class="cart_quantity_button">
+									<a class="cart_quantity_up" href="<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+"> + </a>
+                                                                        
+									<input class="cart_quantity_input cart_quantity_input_<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+" type="text" name="quantity" value="<?php echo $_smarty_tpl->tpl_vars['cart']->value[$_smarty_tpl->tpl_vars['r']->value->id];?>
+" autocomplete="off" size="2">
+									<a class="cart_quantity_down" href="<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+"> - </a>
+								</div>
+							</td>
+							<td class="cart_total">
+								<p class="cart_total_price cart_total_price_<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
+ "><?php echo $_smarty_tpl->tpl_vars['cart']->value[$_smarty_tpl->tpl_vars['r']->value->id]*$_smarty_tpl->tpl_vars['r']->value->price;?>
+</p>
+							</td>
+							<td class="cart_delete">
+								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							</td>
+						</tr>
+                                                <?php
+$_smarty_tpl->tpl_vars['r'] = $__foreach_r_0_saved_local_item;
+}
+if ($__foreach_r_0_saved_item) {
+$_smarty_tpl->tpl_vars['r'] = $__foreach_r_0_saved_item;
+}
+if ($__foreach_r_0_saved_key) {
+$_smarty_tpl->tpl_vars['row'] = $__foreach_r_0_saved_key;
+}
+?>
+                                           <?php } else { ?>
+                                           <h2>Không có sản phẩm</h2>
+                                           <?php }?>
+						<tr>
+							<td colspan="4">&nbsp;</td>
+							<td colspan="2">
+								<table class="table table-condensed total-result">
+									<tr>
+										<td>Cart Sub Total</td>
+										<td><?php echo $_smarty_tpl->tpl_vars['total']->value;?>
+</td>
+									</tr>
+									<tr>
+										<td>Exo Tax</td>
+										<td>0</td>
+									</tr>
+									<tr class="shipping-cost">
+										<td>Shipping Cost</td>
+										<td>Free</td>										
+									</tr>
+									<tr>
+										<td>Total</td>
+										<td><span><?php echo $_smarty_tpl->tpl_vars['total']->value;?>
+</span></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="payment-options">
+					<span>
+						<label><input type="checkbox"> Direct Bank Transfer</label>
+					</span>
+					<span>
+						<label><input type="checkbox"> Check Payment</label>
+					</span>
+					<span>
+						<label><input type="checkbox"> Paypal</label>
+					</span>
+				</div>
 		</div>
-	</section>
+	</section> <!--/#cart_items-->
+
 	
+
 	<footer id="footer"><!--Footer-->
 		<div class="footer-top">
 			<div class="container">
@@ -349,7 +459,7 @@ $_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_item;
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="assets/assets/images/home/iframe3.png" alt="" />
+										<img src="assets/images/home/iframe3.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -454,7 +564,7 @@ $_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_item;
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-Shopper. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
 				</div>
 			</div>
@@ -463,7 +573,7 @@ $_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_item;
 	</footer><!--/Footer-->
 	
 
-  
+
     <?php echo '<script'; ?>
  src="assets/js/jquery.js"><?php echo '</script'; ?>
 >
@@ -484,33 +594,53 @@ $_smarty_tpl->tpl_vars['r'] = $__foreach_r_1_saved_item;
 >
 </body>
 </html>
-
 <?php echo '<script'; ?>
 >
     
     
     $(function(){
-        $(".view").click(function(e){
+        
+        $(".cart_quantity_up").click(function(e){
             e.preventDefault();
             var that = this;
+            var id = $(that).attr('href');
+            var pr = $(".cart_price_"+id).text();
+            var qua = $(".cart_quantity_input_"+id).val();
+            var qua_max = $(".cart_quantity_max_"+id).text();
+            qua++;
+            $(".cart_quantity_input_"+id).val(qua);
+            $(".cart_total_price_"+id).text(qua*pr);
+           
+            if(qua == qua_max){
+                $(that).hide();
+            }
+           $(".cart_quantity_down").show();
             $.ajax({
-                url: "home/view",
+                url: "checkout/to_up",
                 data: 'id=' + $(that).attr('href'),
                 
             })
-            $(location).attr('href', "home/detail/" + $(that).attr('href') )
+            
         })
         
-        $(".add-to-cart").click(function(e){
+        $(".cart_quantity_down").click(function(e){
             e.preventDefault();
             var that = this;
+            var id = $(that).attr('href');
+            var pr = $(".cart_price_"+id).text();
+            var qua = $(".cart_quantity_input_"+id).val();
+            qua--;
+            $(".cart_quantity_input_"+id).val(qua);
+            $(".cart_total_price_"+id).text(qua*pr);
+            
+            if(qua == 0){
+                $(that).hide();
+            }
+            $(".cart_quantity_up").show();
             $.ajax({
-                url: "checkout/add_to_cart",
+                url: "checkout/to_down",
                 data: 'id=' + $(that).attr('href'),
-                
-                success: function(resp){
-                    alert(resp);
-                }
+               
             })
             
         })

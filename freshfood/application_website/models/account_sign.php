@@ -21,7 +21,17 @@ class account_sign extends CI_Model {
         public function get_row($email){
             
             $query = $this->db->get_where('buyer',array('buyer_email' => $email));
-            var_dump($query);
+       
             return $query->row();
         }
+        
+        public function get_row_id($id){
+            
+            $query = $this->db->get_where('buyer',array('buyer_id' => $id));
+          
+            return $query->row();
+            
+        }
+        
+        
 }

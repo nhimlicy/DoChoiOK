@@ -29,6 +29,14 @@ class Home extends CI_Controller {
         $cates = $this->products->get_categories();
         $this->smartyci->assign('cates', $cates);
         
+        $this->load->model('account_sign');
+        $user_id = isset($_SESSION['user']) ? $_SESSION['user'] : 0;
+        
+         
+        $infor = $this->account_sign->get_row_id($user_id);
+        var_dump($infor);
+        $this->smartyci->assign('infor', $infor);
+        
         $this->smartyci->display( 'home/index.tpl' );
                
     }
@@ -58,6 +66,14 @@ class Home extends CI_Controller {
         $cates = $this->products->get_categories();
         $this->smartyci->assign('cates', $cates);
         
+        $this->load->model('account_sign');
+        $user_id = isset($_SESSION['user']) ? $_SESSION['user'] : 0;
+        
+         
+        $infor = $this->account_sign->get_row_id($user_id);
+        var_dump($infor);
+        $this->smartyci->assign('infor', $infor);
+        
           $this->smartyci->display( 'home/detail.tpl' );
           var_dump($rows_cate);
     }
@@ -72,6 +88,13 @@ class Home extends CI_Controller {
         $cates = $this->products->get_categories();
         $this->smartyci->assign('cates', $cates);
         
+        $this->load->model('account_sign');
+        $user_id = isset($_SESSION['user']) ? $_SESSION['user'] : 0;
+        
+         
+        $infor = $this->account_sign->get_row_id($user_id);
+        var_dump($infor);
+        $this->smartyci->assign('infor', $infor);
         $this->smartyci->display( 'home/list.tpl' );
         
     }

@@ -32,8 +32,13 @@
 					<div class="col-sm-6 ">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                                            {if $infor|@count ne 0}
+								<li><a href="#"><i class="fa fa-phone"></i>{$infor->buyer_telephone}</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i>{$infor->buyer_email}</a></li>
+                                                            {else}
+                                                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                                            {/if}
 							</ul>
 						</div>
 					</div>
@@ -86,11 +91,11 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
-								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<li><a href="checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="checkout/cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="account"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -165,7 +170,7 @@
 							{/foreach}
 						</div><!--/category-products-->
 						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
+							{*<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
@@ -176,7 +181,7 @@
 									<li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
 									<li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
 								</ul>
-							</div>
+							</div>*}
 						</div><!--/brands_products-->
 						
 						<div class="price-range"><!--price-range-->

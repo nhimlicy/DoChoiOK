@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-06 18:44:08
+/* Smarty version 3.1.29, created on 2016-04-25 19:01:24
   from "C:\xampp\htdocs\freshfood\application_website\views\checkout\cart.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57053cd83eea33_17503730',
+  'unifunc' => 'content_571e4d642ee204_03374057',
   'file_dependency' => 
   array (
     '858fc980d350d534493202c262161dc0d4f9230e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\freshfood\\application_website\\views\\checkout\\cart.tpl',
-      1 => 1459961045,
+      1 => 1461603679,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57053cd83eea33_17503730 ($_smarty_tpl) {
+function content_571e4d642ee204_03374057 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -179,9 +179,10 @@ function content_57053cd83eea33_17503730 ($_smarty_tpl) {
 				  <li><a href="#">Home</a></li>
 				  <li class="active">Shopping Cart</li>
 				</ol>
-			</div>
+			</div><?php if (count($_smarty_tpl->tpl_vars['rows']->value) != 0) {?>
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
+                                     
 					<thead>
 						<tr class="cart_menu">
 							<td class="image">Item</td>
@@ -194,7 +195,7 @@ function content_57053cd83eea33_17503730 ($_smarty_tpl) {
 						</tr>
 					</thead>
 					<tbody>
-                                          
+                                         
                                             <?php
 $_from = $_smarty_tpl->tpl_vars['rows']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -262,7 +263,9 @@ if ($__foreach_r_0_saved_key) {
 $_smarty_tpl->tpl_vars['row'] = $__foreach_r_0_saved_key;
 }
 ?>
-                                           
+                                           <?php } else { ?>
+                                           <h2>Không có sản phẩm</h2>
+                                           <?php }?>
 					</tbody>
 				</table>
 			</div>
@@ -340,7 +343,7 @@ $_smarty_tpl->tpl_vars['row'] = $__foreach_r_0_saved_key;
 							<li>Total <span>$61</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
-							<a class="btn btn-default check_out" href="">Check Out</a>
+							<a class="btn btn-default check_out" href="checkout">Check Out</a>
 					</div>
 				</div>
 			</div>
