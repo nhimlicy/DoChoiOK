@@ -21,17 +21,33 @@ class Account extends CI_Controller {
             $infor = $this->account_sign->get_row($this->input->post('email'));
             //Kiểm tra password
             if($infor == 0){
-                
-            }  else {
+                redirect("account/notEmail");
+            } else {
                 if($pass == $infor->password){
                 $_SESSION['user'] = $infor->buyer_id;
                 redirect("home");
-            } 
+                } else {
+                    redirect("account/notPass");
+                }
             }
               
         }
         
     }
+    
+    public function notEmail(){
+        $this->load->library( 'smartyci' );
+        
+        $this->smartyci->display( 'account/NotEmail.tpl' );
+    }
+    
+    public function notPass(){
+        $this->load->library( 'smartyci' );
+        
+        $this->smartyci->display( 'account/notPass.tpl' );
+    }
+        
+
     public function sign_up(){
         $this->load->model('account_sign');
         if($this->input->post()){

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-14 18:01:43
+/* Smarty version 3.1.29, created on 2016-06-15 10:18:09
   from "C:\xampp\htdocs\DoChoi\application_admin\views\products\home_products.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57602a67a58d17_79230466',
+  'unifunc' => 'content_57610f41a8a708_00436370',
   'file_dependency' => 
   array (
     'dbd18c994a1d0ba1f6838ee70823bf086021ebc5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DoChoi\\application_admin\\views\\products\\home_products.tpl',
-      1 => 1465920097,
+      1 => 1465978181,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57602a67a58d17_79230466 ($_smarty_tpl) {
+function content_57610f41a8a708_00436370 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -165,7 +165,7 @@ function content_57602a67a58d17_79230466 ($_smarty_tpl) {
               <ul class="treeview-menu">
                 <li class="active"><a href="products/home/add"><i class="fa fa-circle-o"></i> Sản phẩm mới</a></li>
                 <li><a href="seller/home/add"><i class="fa fa-circle-o"></i>  Nhà cung cấp mới</a></li>
-                <li><a href="buyer/home/add"><i class="fa fa-circle-o"></i>  Người mua mới</a></li>
+                
               </ul>
             </li>
             <li class="treeview">
@@ -177,9 +177,9 @@ function content_57602a67a58d17_79230466 ($_smarty_tpl) {
                <li><a href="products/home"><i class="fa fa-circle-o"></i> Producs</a></li>
                 <li><a href="seller/home"><i class="fa fa-circle-o"></i> Seller</a></li>
                 <li><a href="buyer/home"><i class="fa fa-circle-o"></i> Buyer</a></li>
+                <li><a href="order/home"><i class="fa fa-circle-o"></i> Order</a></li>
               </ul>
             </li>
-           
           </ul>
         </section>
         <!-- /.sidebar -->

@@ -171,7 +171,7 @@
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
 										<li><a href="{$r->id}" class="view"><i class="fa fa-plus-square"></i>Chi tiết sản phẩm</a></li>
-										\
+										
 									</ul>
 								</div>
 							</div>

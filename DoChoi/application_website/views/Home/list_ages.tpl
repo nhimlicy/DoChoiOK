@@ -177,10 +177,7 @@
 							</div>
 						</div>
 						{/foreach}
-                                                {*
-						<ul class="pagination">
-							{$page}
-						</ul>*}
+                                                
 					</div><!--features_items-->
 				</div>
 			</div>

@@ -137,7 +137,7 @@
               <ul class="treeview-menu">
                 <li class="active"><a href="products/home/add"><i class="fa fa-circle-o"></i> Sản phẩm mới</a></li>
                 <li><a href="seller/home/add"><i class="fa fa-circle-o"></i>  Nhà cung cấp mới</a></li>
-                <li><a href="buyer/home/add"><i class="fa fa-circle-o"></i>  Người mua mới</a></li>
+                
               </ul>
             </li>
             <li class="treeview">
@@ -149,6 +149,7 @@
                <li><a href="products/home"><i class="fa fa-circle-o"></i> Producs</a></li>
                 <li><a href="seller/home"><i class="fa fa-circle-o"></i> Seller</a></li>
                 <li><a href="buyer/home"><i class="fa fa-circle-o"></i> Buyer</a></li>
+                <li><a href="order/home"><i class="fa fa-circle-o"></i> Order</a></li>
               </ul>
             </li>
            

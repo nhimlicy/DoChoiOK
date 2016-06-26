@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-15 09:14:07
+/* Smarty version 3.1.29, created on 2016-06-15 13:29:46
   from "C:\xampp\htdocs\DoChoi\application_website\views\home\list_loc.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5761003fb61aa6_28060211',
+  'unifunc' => 'content_57613c2a7b2ce7_65554200',
   'file_dependency' => 
   array (
     'ddda8446536fa9d3ad1d728bb1d36d98ca95a9b2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DoChoi\\application_website\\views\\home\\list_loc.tpl',
-      1 => 1465971933,
+      1 => 1465990160,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5761003fb61aa6_28060211 ($_smarty_tpl) {
+function content_57613c2a7b2ce7_65554200 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -315,7 +315,7 @@ $__foreach_r_5_saved_local_item = $_smarty_tpl->tpl_vars['r'];
 									<ul class="nav nav-pills nav-justified">
 										<li><a href="<?php echo $_smarty_tpl->tpl_vars['r']->value->id;?>
 " class="view"><i class="fa fa-plus-square"></i>Chi tiết sản phẩm</a></li>
-										\
+										
 									</ul>
 								</div>
 							</div>

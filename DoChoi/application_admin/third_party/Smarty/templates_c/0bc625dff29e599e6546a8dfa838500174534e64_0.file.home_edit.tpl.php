@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-14 18:19:02
+/* Smarty version 3.1.29, created on 2016-06-15 10:51:52
   from "C:\xampp\htdocs\DoChoi\application_admin\views\seller\home_edit.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_57602e76b9bda6_70493323',
+  'unifunc' => 'content_57611728bf7359_62837328',
   'file_dependency' => 
   array (
     '0bc625dff29e599e6546a8dfa838500174534e64' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DoChoi\\application_admin\\views\\seller\\home_edit.tpl',
-      1 => 1465920601,
+      1 => 1465978210,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_57602e76b9bda6_70493323 ($_smarty_tpl) {
+function content_57611728bf7359_62837328 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -165,7 +165,7 @@ function content_57602e76b9bda6_70493323 ($_smarty_tpl) {
               <ul class="treeview-menu">
                 <li class="active"><a href="products/home/add"><i class="fa fa-circle-o"></i> Sản phẩm mới</a></li>
                 <li><a href="seller/home/add"><i class="fa fa-circle-o"></i>  Nhà cung cấp mới</a></li>
-                <li><a href="buyer/home/add"><i class="fa fa-circle-o"></i>  Người mua mới</a></li>
+                
               </ul>
             </li>
             <li class="treeview">
@@ -177,6 +177,7 @@ function content_57602e76b9bda6_70493323 ($_smarty_tpl) {
                <li><a href="products/home"><i class="fa fa-circle-o"></i> Producs</a></li>
                 <li><a href="seller/home"><i class="fa fa-circle-o"></i> Seller</a></li>
                 <li><a href="buyer/home"><i class="fa fa-circle-o"></i> Buyer</a></li>
+                <li><a href="order/home"><i class="fa fa-circle-o"></i> Order</a></li>
               </ul>
             </li>
            
